@@ -15,9 +15,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".priority" />
         <activity android:name=".calendar" />
         <activity android:name=".daily" />
+        <activity android:name=".special" />
+        <receiver android:name=".ButtonReceiver">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+
+            </intent-filter>
+
+        </receiver>
+        <receiver android:name=".ButtonReceiver1">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+
+            </intent-filter>
+
+        </receiver>
+        <receiver android:name=".AlarmReceiver"></receiver>
     </application>
 
 </manifest>

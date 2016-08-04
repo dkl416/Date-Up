@@ -22,9 +22,9 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/sevendays"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="checkDay"
             android:orientation="horizontal">
 
             <CheckBox
@@ -81,14 +81,15 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="checkEverday"
-            android:text="매일" />
+            android:onClick="checkEveryday"
+            android:text="everyday" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/checkday"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
@@ -96,22 +97,28 @@
             android:id="@+id/week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:onClick="addPeriod"
-            android:text="week" />
+            android:text="week"
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:onClick="addPeriod"
-            android:text="month" />
+            android:text="month"
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:onClick="addPeriod"
-            android:text="year" />
+            android:text="year"
+            android:textColor="#000000" />
 
     </LinearLayout>
 
@@ -119,8 +126,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:orientation="horizontal">
 
@@ -133,30 +139,31 @@
             android:maxLength="4"
             android:onClick="getPeriod"
             android:text="0"
-            android:textSize="32sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="일 반복"
+            android:text="day repeat"
             android:textColor="@android:color/black"
-            android:textSize="32sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="8dp"
+            android:background="#FFFFFF"
             android:onClick="resetPeriod"
-            android:text="reset" />
+            android:text="reset"
+            android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
         android:orientation="horizontal">
 
@@ -167,8 +174,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/linearLayout"
-            android:onClick="setStart"
+
             android:text=""
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <TextView
@@ -182,8 +190,28 @@
             android:id="@+id/end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="setEnd"
             android:text=""
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
     </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/okButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:numStars="5"
+        android:stepSize="1"></RatingBar>
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46dp"
+        android:onClick="okBtn"
+        android:text="OK" />
 </RelativeLayout>
