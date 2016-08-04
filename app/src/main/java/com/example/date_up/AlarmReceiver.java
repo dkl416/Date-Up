@@ -29,7 +29,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                     (NotificationCompat.Builder) new NotificationCompat.Builder(context)
                             .setSmallIcon(R.drawable.d)
                             .setContentTitle("Date-Up")
-                            .setContentText("Meet Dokyung at 11 pm")
+                            .setContentText("Meet Dokyung at 1 am")
                             .addAction(R.drawable.blank, "Delete", pintent)
                             .setColor(context.getResources().getColor(R.color.colorNotification))
                             .setAutoCancel(false)
